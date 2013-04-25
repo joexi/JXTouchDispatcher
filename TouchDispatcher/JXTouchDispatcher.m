@@ -60,7 +60,7 @@ JXTouchDispatcher *_sharedDispatcher;
 - (BOOL)nodeSwallowsTouches:(CCNode *)node touch:(UITouch *)touch withEvent:(UIEvent *)event
 {
     /** judge the node is conforms to touchprotocol or not
-     @exception problem here is CCLayer receive the touch event and throw exception we need wo modify class cclayer
+     @exception problem here is CCLayer receive the touch event and throw exception we need to modify class cclayer
      or we need a category just like top of this page
      */
     if ([node conformsToProtocol:@protocol(CCTargetedTouchDelegate)]) {

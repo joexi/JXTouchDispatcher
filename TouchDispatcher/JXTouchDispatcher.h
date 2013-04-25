@@ -8,9 +8,9 @@
 
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
-/** this is a class is a touch helper to receive all the touch event and disapatch to the right object according
- to their display orther, just like the uikit doing,
- u dont have to adddelegate with priority every sign node which need touch event
+/** this is a helper kind class which receives all touch events and disapatch to the right object according
+ to their display order, just like the uikit doing,
+ u dont have to add delegate with priority every single time when u want an object receiving touch event.
  it will free u from complicate touch priority in cocos2d normal way */
 @interface JXTouchDispatcher : NSObject <CCTargetedTouchDelegate>
 {
