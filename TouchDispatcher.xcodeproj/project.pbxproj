@@ -122,6 +122,7 @@
 		18731E9A17291AF500974E4A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18731E9917291AF500974E4A /* AppDelegate.m */; };
 		18731E9D17291AF500974E4A /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18731E9C17291AF500974E4A /* RootViewController.m */; };
 		18731EA017291AF500974E4A /* HelloWorldLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 18731E9F17291AF500974E4A /* HelloWorldLayer.m */; };
+		18731EA917291B0B00974E4A /* JXTouchDispatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 18731EA817291B0B00974E4A /* JXTouchDispatcher.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -360,6 +361,8 @@
 		18731E9E17291AF500974E4A /* HelloWorldLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HelloWorldLayer.h; sourceTree = "<group>"; };
 		18731E9F17291AF500974E4A /* HelloWorldLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HelloWorldLayer.m; sourceTree = "<group>"; };
 		18731EA117291AF500974E4A /* GameConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameConfig.h; sourceTree = "<group>"; };
+		18731EA717291B0B00974E4A /* JXTouchDispatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JXTouchDispatcher.h; sourceTree = "<group>"; };
+		18731EA817291B0B00974E4A /* JXTouchDispatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JXTouchDispatcher.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -422,6 +425,8 @@
 				18731E9C17291AF500974E4A /* RootViewController.m */,
 				18731E9E17291AF500974E4A /* HelloWorldLayer.h */,
 				18731E9F17291AF500974E4A /* HelloWorldLayer.m */,
+				18731EA717291B0B00974E4A /* JXTouchDispatcher.h */,
+				18731EA817291B0B00974E4A /* JXTouchDispatcher.m */,
 				18731EA117291AF500974E4A /* GameConfig.h */,
 				18731D4717291AF200974E4A /* Resources */,
 				18731D5B17291AF200974E4A /* libs */,
@@ -925,6 +930,7 @@
 				18731E9A17291AF500974E4A /* AppDelegate.m in Sources */,
 				18731E9D17291AF500974E4A /* RootViewController.m in Sources */,
 				18731EA017291AF500974E4A /* HelloWorldLayer.m in Sources */,
+				18731EA917291B0B00974E4A /* JXTouchDispatcher.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -976,6 +982,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = TouchDispatcher/Prefix.pch;
 				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = TouchDispatcher/Resources/Info.plist;
 				OTHER_LDFLAGS = "-lz";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -991,6 +998,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = TouchDispatcher/Prefix.pch;
 				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = TouchDispatcher/Resources/Info.plist;
 				OTHER_LDFLAGS = "-lz";
 				PRODUCT_NAME = "$(TARGET_NAME)";
