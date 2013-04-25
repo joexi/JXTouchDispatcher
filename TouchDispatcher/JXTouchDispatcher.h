@@ -12,6 +12,7 @@
  to their display order, just like the uikit doing,
  u dont have to add delegate with priority every single time when u want an object receiving touch event.
  it will free u from complicate touch priority in cocos2d normal way */
+
 @interface JXTouchDispatcher : NSObject <CCTargetedTouchDelegate>
 {
     id <CCTargetedTouchDelegate> _touchReceiver;
