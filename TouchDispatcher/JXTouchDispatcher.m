@@ -7,6 +7,7 @@
 //
 
 #import "JXTouchDispatcher.h"
+#import "TouchHelper.h"
 @implementation CCLayer (Addition)
 /** rewriting the event in cclayer */
 - (BOOL)ccTouchBegan:(UITouch *)touch withEvent:(UIEvent *)event
@@ -66,10 +67,12 @@ JXTouchDispatcher *_sharedDispatcher;
     if ([node conformsToProtocol:@protocol(CCTargetedTouchDelegate)]) {
         id <CCTargetedTouchDelegate> touchNode = (id <CCTargetedTouchDelegate>)node;
         /** 有节点接收 */
-        if ([touchNode ccTouchBegan:touch withEvent:event]) {
-            [_touchReceiver release];
-            _touchReceiver = [touchNode retain];
-            return YES;
+        if (IsTouchInside(touch, touchNode)) {
+            if ([touchNode ccTouchBegan:touch withEvent:event]) {
+                [_touchReceiver release];
+                _touchReceiver = [touchNode retain];
+                return YES;
+            }
         }
         return NO;
     }
@@ -81,12 +84,9 @@ JXTouchDispatcher *_sharedDispatcher;
 - (BOOL)touchInNode:(CCNode *)node touch:(UITouch *)touch withEvent:(UIEvent *)event
 {
     BOOL swallowsTouches = NO;
-    NSMutableArray *disAry = [NSMutableArray array];
-    /** disorder the childern */
-    for (CCNode *child in node.children) {
-        [disAry insertObject:child atIndex:0];
-    }
-    for (CCNode *child in disAry) {
+    /** disorderby childern */
+    for (int i = node.children.count - 1; i >= 0; i--) {
+        CCNode *child = [node.children objectAtIndex:i];
         /** child first */
         if ([self touchInNode:child touch:touch withEvent:event]) {
             swallowsTouches = YES;

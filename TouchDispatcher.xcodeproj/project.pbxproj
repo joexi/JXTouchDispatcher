@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18460F8A172A867D00AF33CE /* TouchHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 18460F89172A867D00AF33CE /* TouchHelper.m */; };
+		18460F8D172A879400AF33CE /* JXTouchSprite.m in Sources */ = {isa = PBXBuildFile; fileRef = 18460F8C172A879400AF33CE /* JXTouchSprite.m */; };
 		18731D3717291AF200974E4A /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18731D3617291AF200974E4A /* QuartzCore.framework */; };
 		18731D3917291AF200974E4A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18731D3817291AF200974E4A /* OpenGLES.framework */; };
 		18731D3B17291AF200974E4A /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18731D3A17291AF200974E4A /* OpenAL.framework */; };
@@ -126,6 +128,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		18460F88172A867D00AF33CE /* TouchHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchHelper.h; sourceTree = "<group>"; };
+		18460F89172A867D00AF33CE /* TouchHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TouchHelper.m; sourceTree = "<group>"; };
+		18460F8B172A879400AF33CE /* JXTouchSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JXTouchSprite.h; sourceTree = "<group>"; };
+		18460F8C172A879400AF33CE /* JXTouchSprite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JXTouchSprite.m; sourceTree = "<group>"; };
 		18731D3317291AF200974E4A /* TouchDispatcher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TouchDispatcher.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18731D3617291AF200974E4A /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		18731D3817291AF200974E4A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -427,6 +433,10 @@
 				18731E9F17291AF500974E4A /* HelloWorldLayer.m */,
 				18731EA717291B0B00974E4A /* JXTouchDispatcher.h */,
 				18731EA817291B0B00974E4A /* JXTouchDispatcher.m */,
+				18460F88172A867D00AF33CE /* TouchHelper.h */,
+				18460F89172A867D00AF33CE /* TouchHelper.m */,
+				18460F8B172A879400AF33CE /* JXTouchSprite.h */,
+				18460F8C172A879400AF33CE /* JXTouchSprite.m */,
 				18731EA117291AF500974E4A /* GameConfig.h */,
 				18731D4717291AF200974E4A /* Resources */,
 				18731D5B17291AF200974E4A /* libs */,
@@ -931,6 +941,8 @@
 				18731E9D17291AF500974E4A /* RootViewController.m in Sources */,
 				18731EA017291AF500974E4A /* HelloWorldLayer.m in Sources */,
 				18731EA917291B0B00974E4A /* JXTouchDispatcher.m in Sources */,
+				18460F8A172A867D00AF33CE /* TouchHelper.m in Sources */,
+				18460F8D172A879400AF33CE /* JXTouchSprite.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1026,6 +1038,7 @@
 				18731EA617291AF500974E4A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

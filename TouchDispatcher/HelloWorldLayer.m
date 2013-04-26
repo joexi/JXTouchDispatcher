@@ -9,7 +9,7 @@
 
 // Import the interfaces
 #import "HelloWorldLayer.h"
-
+#import "JXTouchSprite.h"
 // HelloWorldLayer implementation
 @implementation HelloWorldLayer
 
@@ -34,20 +34,14 @@
 	// always call "super" init
 	// Apple recommends to re-assign "self" with the "super" return value
 	if( (self=[super init])) {
-        CCLayer *l = [CCLayer node];
-        [self addChild:l];
 		[[JXTouchDispatcher sharedDispatcher] begin];
-		// create and initialize a Label
-		CCLabelTTF *label = [CCLabelTTF labelWithString:@"Hello World" fontName:@"Marker Felt" fontSize:64];
-
-		// ask director the the window size
-		CGSize size = [[CCDirector sharedDirector] winSize];
-	
-		// position the label on the center of the screen
-		label.position =  ccp( size.width /2 , size.height/2 );
-		
-		// add the label as a child to this Layer
-		[self addChild: label];
+        
+        for (int i = 0; i <= 20; i++) {
+            JXTouchSprite *sp = [JXTouchSprite spriteWithFile:@"Icon-72.png"];
+            sp.position = ccp(arc4random()%320,arc4random()%480);
+            int z = arc4random()%100;
+            [self addChild:sp z:z];
+        }
 	}
 	return self;
 }
@@ -55,6 +49,7 @@
 // on "dealloc" you need to release all your retained objects
 - (void) dealloc
 {
+    [[JXTouchDispatcher sharedDispatcher] end];
 	// in case you have something to dealloc, do it in this method
 	// in this particular example nothing needs to be released.
 	// cocos2d will automatically release all the children (Label)
