@@ -8,4 +8,5 @@ A touch events dispather in cocos2D for iphone, this will release every cocos2d-
 * Auto dispather the user touch event in the order the nodes are displayed
 
 # How to use
-call >[[JXTouchDispatcher sharedDispatcher] begin];
+call when you want to auto-dispatch your touch event
+>[[JXTouchDispatcher sharedDispatcher] begin];
